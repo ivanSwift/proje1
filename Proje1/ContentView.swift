@@ -14,8 +14,23 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
+            MyButton()
+            MyLabel()
         }
         .padding()
+    }
+}
+
+struct MyButton: View{
+    var body: some View{
+        Button{print("Helllo world!")}
+        label: {Circle().foregroundStyle(.red)}
+    }
+}
+
+struct MyLabel:View{
+    var body: some View{
+        Text("Hello world!")
     }
 }
 
